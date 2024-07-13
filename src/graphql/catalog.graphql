@@ -1,0 +1,18 @@
+type Catalog {
+    id: UUID!
+    # key: UUID!
+    is_active: Boolean
+    slug: String
+    value: String
+    created_at: String
+    updated_at: String
+    # rubric: [Rubric] @morphMany
+    # text: [Text] @morphMany
+    # parentable: Parentable @morphTo
+}
+
+extend type Query {
+    catalog: [Catalog] @all
+    # catalog(key: UUID! @eq): [Catalog] @all
+    # catalog_one(slug: String! @eq, key: UUID! @eq): Catalog @find
+}
