@@ -7,12 +7,12 @@ use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Catalog extends RootModel
 {
-protected $table = 'catalog';
+    protected $table = 'catalog';
 
-    // public function rubric(): MorphMany
-    // {
-    //     return $this->morphMany(Rubric::class, 'parentable');
-    // }
+    public function rubric(): MorphMany
+    {
+        return $this->morphMany(Rubric::class, 'parentable');
+    }
 
     // public function text(): MorphMany
     // {

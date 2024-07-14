@@ -1,4 +1,3 @@
 #import catalog.graphql
 
-union Parentable = Catalog
-
+scalar UUID
