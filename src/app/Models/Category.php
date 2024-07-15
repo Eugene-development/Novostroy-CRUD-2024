@@ -6,18 +6,17 @@ use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 
-class Rubric extends RootModel
+class Category extends RootModel
 {
-    protected $table = 'rubric';
-    
-    public function category(): MorphMany
+    protected $table = 'category';
+
+    public function product(): MorphMany
     {
-        return $this->morphMany(Category::class, 'parentable');
+        return $this->morphMany(Product::class, 'parentable');
     }
     
     public function parentable(): MorphTo
     {
         return $this->morphTo();
     }
-
 }

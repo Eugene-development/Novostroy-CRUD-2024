@@ -1,0 +1,9 @@
+type Unit {
+    id: UUID!
+    key: UUID!
+    is_active: Boolean
+    slug: String
+    value: String!
+    created_at: String
+    updated_at: String
+}
