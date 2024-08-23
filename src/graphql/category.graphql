@@ -7,4 +7,9 @@ type Category {
     created_at: String
     updated_at: String
     product: [Product] @morphMany
+    product_count: Int @count(relation: "product")
+}
+
+extend type Query {
+    category(slug: String! @eq, key: UUID! @eq): Category @find
 }

@@ -1,0 +1,7 @@
+type Text {
+    id: UUID!
+    key: UUID!
+    is_active: Boolean
+    value: String
+    parentable: Parentable @morphTo
+}

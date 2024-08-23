@@ -7,12 +7,9 @@ type Catalog {
     created_at: String
     updated_at: String
     rubric: [Rubric] @morphMany
-    # text: [Text] @morphMany
-    # parentable: Parentable @morphTo
+    text: Text @morphMany
 }
 
 extend type Query {
-    # catalog: [Catalog] @all
-    catalog(key: UUID! @eq): [Catalog] @all
-    # catalog_one(slug: String! @eq, key: UUID! @eq): Catalog @find
+    catalog(slug: String! @eq, key: UUID! @eq): Catalog @find
 }

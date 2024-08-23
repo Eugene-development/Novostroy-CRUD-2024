@@ -4,11 +4,10 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 
-
-class Price extends RootModel
+class Text extends RootModel
 {
-    protected $table = 'price';
-    
+    protected $table = 'text';
+
     public function parentable(): MorphTo
     {
         return $this->morphTo();

@@ -6,9 +6,5 @@ type Rubric {
     value: String!
     created_at: String
     updated_at: String
-    category: [Category] @morphMany
-    # text: [Text] @morphMany
-    # seoTitle: SeoTitle @morphOne
-    # seoDescription: SeoDescription @morphOne
-    # parentable: Parentable @morphTo
+    category: [Category] @field(resolver: "App\\GraphQL\\Resolvers\\RubricResolver@resolveCategories")
 }

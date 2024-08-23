@@ -4,5 +4,6 @@
 #import product.graphql
 #import price.graphql
 #import unit.graphql
+#import text.graphql
 
 scalar UUID

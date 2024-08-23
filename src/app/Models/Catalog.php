@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Illuminate\Database\Eloquent\Relations\MorphMany;
 
 class Catalog extends RootModel
@@ -14,13 +14,9 @@ class Catalog extends RootModel
         return $this->morphMany(Rubric::class, 'parentable');
     }
 
-    // public function text(): MorphMany
-    // {
-    //     return $this->morphMany(Text::class, 'parentable');
-    // }
-
-    // public function parentable(): MorphTo
-    // {
-    //     return $this->morphTo();
-    // }
+    public function text(): MorphOne
+    {
+        return $this->morphOne(Text::class, 'parentable');
+    }
+ 
 }
