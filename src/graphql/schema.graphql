@@ -7,3 +7,12 @@
 #import text.graphql
 
 scalar UUID
+
+union Parentable =     
+    Catalog
+    | Rubric
+    | Category
+    | Product
+    | Price
+    | Unit
+    | Text

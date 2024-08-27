@@ -8,6 +8,7 @@ type Category {
     updated_at: String
     product: [Product] @morphMany
     product_count: Int @count(relation: "product")
+    parentable: Parentable! @morphTo
 }
 
 extend type Query {
