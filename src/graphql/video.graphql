@@ -1,0 +1,8 @@
+type Video {
+    id: ID!
+    key: String!
+    active: Boolean
+    hash: String
+    alt: String
+    parentable: Parentable! @morphTo
+}
