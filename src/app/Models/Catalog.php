@@ -9,6 +9,16 @@ class Catalog extends RootModel
 {
     protected $table = 'catalog';
 
+    public function metaTitle(): MorphOne
+    {
+        return $this->morphOne(MetaTitle::class, 'parentable');
+    }
+
+    public function metaDescription(): MorphOne
+    {
+        return $this->morphOne(MetaDescription::class, 'parentable');
+    }
+
     public function rubric(): MorphMany
     {
         return $this->morphMany(Rubric::class, 'parentable');

@@ -9,6 +9,8 @@ type Category {
     product: [Product] @morphMany
     product_count: Int @count(relation: "product")
     parentable: Parentable! @morphTo
+    metaTitle: MetaTitle @morphOne
+    metaDescription: MetaDescription @morphOne
 }
 
 extend type Query {

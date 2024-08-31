@@ -1,0 +1,16 @@
+type Tag {
+    id: UUID!
+    key: UUID!
+    is_active: Boolean
+    # slug: String
+    value: String!
+    created_at: String
+    updated_at: String
+    # taggable: Taggable @morphToMany
+    # parentable: Parentable! @morphTo
+    product: [Product] @morphMany
+}
+
+extend type Query {
+    tag(key: UUID @eq): [Tag] @all
+}

@@ -1,6 +1,6 @@
 type MetaDescription {
     id: UUID!
-    key: UUID1
+    key: UUID!
     is_active: Boolean
     value: String
     parentable: Parentable @morphTo

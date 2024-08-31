@@ -8,4 +8,10 @@ type Product {
     updated_at: String
     price: Price @morphOne
     unit: Unit @morphOne
+    image: [Image] @morphMany
+    video: [Video] @morphMany
+    metaTitle: MetaTitle @morphOne
+    metaDescription: MetaDescription @morphOne
+    tag: [Tag] @morphTo
+    parentable: Parentable @morphTo
 }
