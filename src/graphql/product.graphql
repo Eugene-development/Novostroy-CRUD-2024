@@ -15,3 +15,7 @@ type Product {
     tag: [Tag] @morphTo
     parentable: Parentable @morphTo
 }
+
+extend type Query {
+    product(slug: String! @eq, key: UUID! @eq): Product @find
+}
