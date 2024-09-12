@@ -52,4 +52,6 @@ php artisan vendor:publish --tag=lighthouse-schema
 устанавливаем графи
 composer require mll-lab/laravel-graphiql
 
+appServiceProvider
+
 php artisan serve
